@@ -1,0 +1,25 @@
+﻿StarField - Credits
+
+Plugin
+- StarField.aex is a modified version of "Tweak Shader AE" by mobile-bungalow (Paul May), MIT License (LICENSE.txt).
+  https://github.com/mobile-bungalow/tweak_shader_ae_plugin
+- Modifications (point3 input type, sidecar shader autoload, full-size image inputs, 16bpc fixes) by Takashi Aoki / Over Ray Studio.
+  https://github.com/TakashiAoki/tweak_shader_ae_plugin (branch: starfield-vec3)
+- Shader runtime: "tweak_shader" by mobile-bungalow (Paul May), MIT License (LICENSE_tweak_shader.txt).
+  https://github.com/mobile-bungalow/tweak_shader
+- The license list of the other Rust libraries used to build the plugin (after-effects, wgpu, naga, etc.) will be included in the next release.
+
+Shaders (stardome_v7 / starfield_v7 / nearfield_v2 / stardome_real) and setup script
+- Copyright Over Ray Studio / Takashi Aoki.
+- Star stream algorithm ported from CodePen "Particles Stream" by sabosugi (MIT).
+  https://codepen.io/sabosugi/pen/yygMKRb
+- Hash functions: "Hash without Sine" by David Hoskins (MIT).
+  https://www.shadertoy.com/view/4djSRW
+- Sky dome design informed by the public specification of StarPro (Maas Digital). No code or data is reused.
+
+Real sky data (catalog/hipparcos_starmap_8k.png, catalog/milkyway_8k.png, used by stardome_real)
+- Star positions, magnitudes and colors: The Hipparcos and Tycho Catalogues, ESA SP-1200 (1997).
+  ESA Hipparcos mission. Distributed by CDS VizieR, catalog I/239: https://cdsarc.cds.unistra.fr/ftp/cats/I/239/
+- Milky Way map: NASA/Goddard Space Flight Center Scientific Visualization Studio, "Deep Star Maps 2020".
+  https://svs.gsfc.nasa.gov/4851 (public domain). Gaia DR2: ESA/Gaia/DPAC.
+- Both images were re-encoded for the shader (8-bit, 8192x4096) by Over Ray Studio.
